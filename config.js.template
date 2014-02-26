@@ -1,0 +1,31 @@
+module.exports = {
+    /* TODO: How to get access token?  https://put.io/user/api/apps https://put.io/v2/docs/gettingstarted.html#authentication-and-access */
+    oauth_token: 'XXXXXX',
+    // Add folders to this array which should be synced
+    sync : [
+        {
+            // Path on the put.io filesystem
+            remote_path: 'TV Shows',
+            // Folder on your local system
+            local_path : 'X:\\TV Shows',
+            // Set to 'true' to download all subfolders from put.io
+            recursive: true,
+            // Set to 'true' to delete downloads from put.io after successful download
+            delete: true,
+            // Set to 'true' to delete empty subfolders from put.io
+            delete_subfolder: true
+        },
+        {
+            // Path on the put.io filesystem
+            remote_path: 'Movies',
+            // Folder on your local system
+            local_path : 'V:\\Movies',
+            // Set to 'true' to download all subfolders from put.io
+            recursive: true,
+            // Set to 'true' to delete downloads from put.io after successful download
+            delete: true,
+            // Set to 'true' to delete empty subfolders from put.io
+            delete_subfolder: true
+        }
+    ]
+}

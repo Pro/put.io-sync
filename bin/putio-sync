@@ -4,5 +4,16 @@
 var path = require('path');
 var fs = require('fs');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+var nopt = require("nopt")
+    , knownOpts = {
+        // Override monogamy checking
+        "override" : Boolean
+    }
+    , shortHands = {
+        "o" : ["--override"]
+    }
+    , parsed = nopt(knownOpts, shortHands)
 
-require(lib+'/putio-sync.js')
+var PutIOSync = require(lib+'/putio-sync.js')
+
+var sync = new PutIOSync(parsed);
