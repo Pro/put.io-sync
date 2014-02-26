@@ -1,0 +1,32 @@
+{
+  "author": "Stefan Profanter",
+  "name": "put.io-sync",
+  "description": "Put.io Sync and automatic file download",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pro/put.io-sync.git"
+  },
+  "main": "./lib/putio-sync",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "keywords": [
+    "put.io",
+    "sync"
+  ],
+  "bin": {
+    "putio-sync": "./bin/putio-sync"
+  },
+  "dependencies": {
+      "put.io-v2" : "*",
+      "underscore" : "*"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
