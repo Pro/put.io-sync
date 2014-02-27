@@ -25,9 +25,11 @@
       "colors" : ">=0.6.2",
       "ensureDir" : ">=1.0.6",
       "nopt" : ">=2.2.0",
+      "nopt-usage" : ">=0.1.0",
       "status-bar": ">=2.0.0",
       "fswin": ">=2.13.*",
-      "request" : ">=2.33"
+      "request" : ">=2.33",
+      "ansi": ">=0.2.1"
   },
   "devDependencies": {
     "tap": "~0.4.8"

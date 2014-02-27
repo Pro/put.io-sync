@@ -3,17 +3,53 @@
 "use strict";
 var path = require('path');
 var fs = require('fs');
+var _ = require('underscore');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 var nopt = require("nopt")
+    , noptUsage = require("nopt-usage")
+    , Stream = require("stream").Stream
     , knownOpts = {
-        // Override monogamy checking
-        "override" : Boolean
+        "help": Boolean,
+        "override": Boolean,
+        "parallel": [Stream, Number],
+        "config": path,
+        "verbosity" : [Stream, Number],
+        "quiet": Boolean,
+        "wait" : [Stream, Number]
     }
     , shortHands = {
-        "o" : ["--override"]
+        "h": ["--help", "true"],
+        "o": ["--override", "true"],
+        "p": ["--parallel"],
+        "c": ["--config"],
+        "v": ["--verbosity"],
+        "q": ["--quiet"]
+    }
+    , description = {
+        "help": "Print this message",
+        "override": "Override monogamy checking. Ignore if another instance is already running",
+        "parallel": "Number of parallel downloads",
+        "config": "Path to config.js file",
+        "verbosity": "Set verbosity level. 0=only errors, 5=debug messages",
+        "quiet": "No output whatsoever",
+        "wait": "Wait for this many seconds, then sync again"
+    }
+    , defaults = {
+        "override": false,
+        "parallel": 10,
+        "config": "config.js",
+        "verbosity": 1,
+        "quiet" : false
     }
     , parsed = nopt(knownOpts, shortHands)
+    , usage = noptUsage(knownOpts, shortHands, description, defaults)
 
-var PutIOSync = require(lib+'/putio-sync.js')
+if (parsed.help) {
+    console.log('Usage: ')
+    console.log(usage)
+    process.exit(0);
+}
 
-var sync = new PutIOSync(parsed);
+var PutIOSync = require(lib + '/putio-sync.js')
+
+var sync = new PutIOSync(_.extend(defaults, parsed));
