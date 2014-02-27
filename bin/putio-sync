@@ -53,3 +53,4 @@ if (parsed.help) {
 var PutIOSync = require(lib + '/putio-sync.js')
 
 var sync = new PutIOSync(_.extend(defaults, parsed));
+sync.startSync();
