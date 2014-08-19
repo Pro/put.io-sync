@@ -1,12 +1,12 @@
 module.exports = {
-    /* TODO: How to get access token?  https://put.io/user/api/apps https://put.io/v2/docs/gettingstarted.html#authentication-and-access */
+    /* Get the token by opening: https://api.put.io/v2/oauth2/authenticate?client_id=1159&response_type=code&redirect_uri=http://profanter.me/putio/node */
     oauth_token: 'XXXXXX',
     // Add folders to this array which should be synced
     sync : [
         {
             // Path on the put.io filesystem
             remote_path: 'TV Shows',
-            // Folder on your local system
+            // Folder on your local system. You need to escape backslashes.
             local_path : 'X:\\TV Shows',
             // Set to 'true' to download all subfolders from put.io
             recursive: true,
