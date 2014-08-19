@@ -15,3 +15,9 @@ https://api.put.io/v2/oauth2/authenticate?client_id=1159&response_type=code&redi
 # Executing
 
 `node bin/putio-sync`
+
+# Organizing your TV Shows
+
+If you want to automatically order your TV Shows you can check out this handy script:
+
+https://github.com/arrizer/TVGeek
