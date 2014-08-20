@@ -1,5 +1,4 @@
 put.io-sync [![NPM version](https://badge.fury.io/js/put.io-sync.svg)](http://badge.fury.io/js/put.io-sync) [![Build Status](https://secure.travis-ci.org/Pro/put.io-sync.svg)](http://travis-ci.org/Pro/put.io-sync) [![Dependency Status](https://david-dm.org/pro/put.io-sync.svg)](https://david-dm.org/pro/put.io-sync)
-
 ===========
 
 [![NPM](https://nodei.co/npm/put.io-sync.png)](https://nodei.co/npm/put.io-sync/)

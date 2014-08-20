@@ -2,7 +2,7 @@
   "author": "Stefan Profanter",
   "name": "put.io-sync",
   "description": "Put.io Sync and automatic file download",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git://github.com/Pro/put.io-sync.git"
@@ -27,7 +27,7 @@
       "nopt" : ">=2.2.0",
       "nopt-usage" : ">=0.1.0",
       "status-bar": ">=2.0.0",
-	  "fswin-binary": "git://github.com/stevenvachon/fswin-binary.git",
+	  "fswin-binary": ">=0.1.0",
       "request" : ">=2.33",
       "ansi": ">=0.2.1"
   },
