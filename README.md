@@ -24,4 +24,4 @@ https://github.com/arrizer/TVGeek
 
 # Changelog
 
-* 0.0.5 [27.08.2014]: Updated dependency for put.io-v2 to 0.0.2
+* 0.0.7 [27.08.2014]: Updated dependency for put.io-v2 to 0.0.2 and fswin-binary
