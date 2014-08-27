@@ -21,3 +21,7 @@ https://api.put.io/v2/oauth2/authenticate?client_id=1159&response_type=code&redi
 If you want to automatically order your TV Shows you can check out this handy script:
 
 https://github.com/arrizer/TVGeek
+
+# Changelog
+
+* 0.0.5 [27.08.2014]: Updated dependency for put.io-v2 to 0.0.2
