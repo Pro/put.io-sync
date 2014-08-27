@@ -19,7 +19,7 @@
     "putio-sync": "./bin/putio-sync"
   },
   "dependencies": {
-      "put.io-v2" : ">=0.0.1",
+      "put.io-v2" : ">=0.0.2",
       "underscore" : ">=1.6.0",
       "npid" : ">=0.3.2",
       "colors" : ">=0.6.2",
